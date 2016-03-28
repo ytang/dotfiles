@@ -1,0 +1,3 @@
+let g:spf13_bundle_groups=['general', 'writing', 'programming', 'neocomplete', 'php', 'python', 'javascript', 'scala', 'haskell', 'html', 'ruby', 'puppet', 'go', 'elixir', 'misc']
+let g:spf13_leader='\'
+let g:airline_powerline_fonts=1
