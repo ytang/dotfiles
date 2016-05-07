@@ -1,9 +1,5 @@
-if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-    let g:solarized_termcolors=16
-    color solarized
-endif
-
-highlight clear SignColumn      " SignColumn should match background
+color apprentice
+hi ColorColumn ctermbg=0 guibg=#1c1c1c
 
 set scrolloff=999               " Always center the current line
 set colorcolumn=80
@@ -22,8 +18,8 @@ inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump
 if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
     let g:indent_guides_guide_size=0
     let g:indent_guides_auto_colors=0
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#002b36 ctermbg=8
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#073642 ctermbg=0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=235
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#1c1c1c ctermbg=0
 endif
 
 let g:airline#extensions#bufferline#enabled=0
