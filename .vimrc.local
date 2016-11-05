@@ -1,5 +1,5 @@
-color apprentice
-hi ColorColumn ctermbg=0 guibg=#1c1c1c
+let g:hybrid_custom_term_colors=1
+color hybrid
 
 set scrolloff=999               " Always center the current line
 set colorcolumn=80
@@ -18,8 +18,8 @@ inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump
 if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
     let g:indent_guides_guide_size=0
     let g:indent_guides_auto_colors=0
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=235
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#1c1c1c ctermbg=0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1d1f21 ctermbg=NONE
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#282a2e ctermbg=0
 endif
 
 let g:airline#extensions#bufferline#enabled=0
