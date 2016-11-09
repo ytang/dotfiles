@@ -241,6 +241,9 @@ set -g history-limit 100000
 # move status line to top
 #set -g status-position top
 
+# support italics
+set -g default-terminal "tmux-256color"
+
 # define an easier prefix
 unbind C-a
 unbind C-b

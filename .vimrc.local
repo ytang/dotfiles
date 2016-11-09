@@ -38,3 +38,5 @@ endif
 
 let g:AutoPairsCenterLine=0
 let g:AutoPairsShortcutFastWrap='<C-e>'
+
+highlight Comment cterm=italic
