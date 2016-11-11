@@ -2,4 +2,4 @@ let g:spf13_bundle_groups=['general', 'writing', 'programming', 'neocomplete', '
 let g:spf13_leader=' '
 let g:spf13_clear_search_highlight=1
 let g:airline_powerline_fonts=1
-let g:airline_theme='hybridline'
+let g:airline_theme='oceanicnext'

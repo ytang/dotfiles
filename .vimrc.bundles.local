@@ -1,1 +1,2 @@
+Plugin 'chriskempson/base16-vim'
 Plugin 'Konfekt/FastFold'
