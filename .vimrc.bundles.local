@@ -1,2 +1,2 @@
-Plugin 'chriskempson/base16-vim'
+Plugin 'mhartington/oceanic-next'
 Plugin 'Konfekt/FastFold'
