@@ -3,6 +3,8 @@ colorscheme base16-oceanicnext
 
 set scrolloff=999               " Always center the current line
 set colorcolumn=80
+set wrap
+set linebreak
 
 if has('python3')
     let g:pymode_lint_on_write=0
