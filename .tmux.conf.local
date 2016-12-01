@@ -85,14 +85,14 @@ tmux_conf_theme_mode_attr='bold'
 
 # status line style
 tmux_conf_theme_status_fg='brightblack'                     # light gray
-tmux_conf_theme_status_bg='colour18'                     # dark gray
+tmux_conf_theme_status_bg='#343d46'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
 # window status style
 #   - built-in variables are:
 #     - #{circled_window_index}
 tmux_conf_theme_window_status_fg='brightblack'              # light gray
-tmux_conf_theme_window_status_bg='colour18'              # dark gray
+tmux_conf_theme_window_status_bg='#343d46'              # dark gray
 tmux_conf_theme_window_status_attr='none'
 tmux_conf_theme_window_status_format='#I #W'
 #tmux_conf_theme_window_status_format='#{circled_window_index} #W'
@@ -165,7 +165,7 @@ tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
 tmux_conf_theme_status_right_fg='brightblack,brightwhite,black' # light gray, white, black
-tmux_conf_theme_status_right_bg='colour18,red,white' # dark gray, red, white
+tmux_conf_theme_status_right_bg='#343d46,red,white' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
