@@ -1,2 +1,3 @@
-Plugin 'mhartington/oceanic-next'
 Plugin 'Konfekt/FastFold'
+Plugin 'mhartington/oceanic-next'
+Plugin 'ryanoasis/vim-devicons'
