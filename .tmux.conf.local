@@ -276,5 +276,7 @@ bind-key -t vi-copy Y copy-end-of-line
 # Aggressively resize the chosen window
 set-window-option -g aggressive-resize on
 
+set-option -ga terminal-overrides ",st-256color:Tc"
+
 # Start a new session if one doesn't already exist
 new-session
