@@ -3,21 +3,17 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 if (has("termguicolors"))
     set termguicolors
 endif
+let g:oceanic_next_terminal_bold=1
+let g:oceanic_next_terminal_italic=1
 colorscheme OceanicNext
 
-set scrolloff=999               " Always center the current line
 set colorcolumn=80
-set wrap
 set linebreak
+set scrolloff=999               " Always center the current line
+set timeoutlen=300
+set wrap
 
 autocmd FileType nerdtree setlocal nolist
-
-if has('python3')
-    let g:pymode_lint_on_write=0
-    let g:syntastic_python_python_exec='python3'
-    let g:syntastic_python_flake8_exec='python3-flake8'
-    let g:syntastic_python_pylint_exec='python3-pylint'
-endif
 
 let g:ctrlp_by_filename=1
 
@@ -48,3 +44,4 @@ let g:AutoPairsCenterLine=0
 let g:AutoPairsShortcutFastWrap='<C-e>'
 
 highlight Comment cterm=italic
+highlight CursorLine cterm=none
