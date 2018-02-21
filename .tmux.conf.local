@@ -55,7 +55,7 @@ tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
 tmux_conf_theme_focused_pane_fg='default'
-tmux_conf_theme_focused_pane_bg='blue'               # light blue
+tmux_conf_theme_focused_pane_bg='cyan'               # light blue
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -64,11 +64,11 @@ tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
 tmux_conf_theme_pane_border='brightblack'                   # gray
-tmux_conf_theme_pane_active_border='blue'            # light blue
+tmux_conf_theme_pane_active_border='cyan'            # light blue
 
 # pane indicator colours
-tmux_conf_theme_pane_indicator='blue'                # light blue
-tmux_conf_theme_pane_active_indicator='blue'         # light blue
+tmux_conf_theme_pane_indicator='cyan'                # light blue
+tmux_conf_theme_pane_active_indicator='cyan'         # light blue
 
 # status line style
 tmux_conf_theme_message_fg='black'                    # black
@@ -86,15 +86,15 @@ tmux_conf_theme_mode_bg='yellow'                       # yellow
 tmux_conf_theme_mode_attr='bold'
 
 # status line style
-tmux_conf_theme_status_fg='brightblack'                     # light gray
-tmux_conf_theme_status_bg='#343d46'                     # dark gray
+tmux_conf_theme_status_fg='#d8dee9'                     # light gray
+tmux_conf_theme_status_bg='black'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
 # window status style
 #   - built-in variables are:
 #     - #{circled_window_index}
-tmux_conf_theme_window_status_fg='brightblack'              # light gray
-tmux_conf_theme_window_status_bg='#343d46'              # dark gray
+tmux_conf_theme_window_status_fg='#d8dee9'              # light gray
+tmux_conf_theme_window_status_bg='black'              # dark gray
 tmux_conf_theme_window_status_attr='none'
 tmux_conf_theme_window_status_format='#I #W'
 #tmux_conf_theme_window_status_format='#{circled_window_index} #W'
@@ -104,7 +104,7 @@ tmux_conf_theme_window_status_format='#I #W'
 #   - built-in variables are:
 #     - #{circled_window_index}
 tmux_conf_theme_window_status_current_fg='black'      # black
-tmux_conf_theme_window_status_current_bg='blue'      # light blue
+tmux_conf_theme_window_status_current_bg='cyan'      # light blue
 tmux_conf_theme_window_status_current_attr='bold'
 tmux_conf_theme_window_status_current_format='#I #W'
 #tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
@@ -121,7 +121,7 @@ tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='blue'         # light blue
+tmux_conf_theme_window_status_last_fg='cyan'         # light blue
 tmux_conf_theme_window_status_last_bg='default'
 tmux_conf_theme_window_status_last_attr='none'
 
@@ -166,19 +166,19 @@ tmux_conf_theme_status_left_bg='yellow,magenta,cyan'  # yellow, pink, white blue
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='brightblack,brightwhite,black' # light gray, white, black
-tmux_conf_theme_status_right_bg='#343d46,red,white' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#d8dee9,white,black' # light gray, white, black
+tmux_conf_theme_status_right_bg='black,red,white' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓'          # U+1F453
-tmux_conf_theme_pairing_fg='none'
+tmux_conf_theme_pairing_fg='brightcyan'
 tmux_conf_theme_pairing_bg='none'
 tmux_conf_theme_pairing_attr='none'
 
 # prefix indicator
 tmux_conf_theme_prefix='⌨'            # U+2328
-tmux_conf_theme_prefix_fg='none'
+tmux_conf_theme_prefix_fg='brightcyan'
 tmux_conf_theme_prefix_bg='none'
 tmux_conf_theme_prefix_attr='none'
 
@@ -228,7 +228,7 @@ tmux_conf_battery_status_charging='🔌 '    # U+1F50C
 tmux_conf_battery_status_discharging='🔋 ' # U+1F50B
 
 # clock style
-tmux_conf_theme_clock_colour='blue'  # light blue
+tmux_conf_theme_clock_colour='cyan'  # light blue
 tmux_conf_theme_clock_style='12'
 
 
@@ -286,7 +286,7 @@ bind -n M-9 select-window -t 9
 bind -n M-0 select-window -t 10
 
 # split panes
-bind | split-window -h -c '#{pane_current_path}'
+bind | split-window -h
 
 # copy mode
 bind -T copy-mode-vi Y send -X copy-end-of-line
