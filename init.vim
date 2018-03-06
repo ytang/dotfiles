@@ -45,6 +45,7 @@ function! Layers()
   ExtraPlugin 'carlitux/deoplete-ternjs'
   ExtraPlugin 'ryanoasis/vim-devicons'
   ExtraPlugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+  ExtraPlugin 'Xuyuanp/nerdtree-git-plugin'
 endfunction
 
 function! UserInit()
