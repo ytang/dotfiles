@@ -69,6 +69,7 @@ function! UserConfig()
   let g:rooter_change_directory_for_non_project_files = 'current'
   let g:rooter_silent_chdir = 1
   let g:startify_change_to_dir = 0
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
   set cmdheight=1
   set colorcolumn=80
   set cursorline
