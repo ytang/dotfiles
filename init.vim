@@ -70,13 +70,19 @@ function! UserConfig()
   let g:rooter_silent_chdir = 1
   let g:startify_change_to_dir = 0
   let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
   set cmdheight=1
-  set colorcolumn=80
   set cursorline
   set norelativenumber
   set noshowmode
   set scrolloff=999
   set wildmode=list:longest,full
+
+  augroup LineTooLong
+    autocmd!
+    autocmd BufEnter,WinEnter * call clearmatches() | call matchadd('ColorColumn', '\%>80v.\+', -1)
+  augroup END
+
   SetThemeWithBg 'dark', 'nord', 'nord'
 endfunction
 
