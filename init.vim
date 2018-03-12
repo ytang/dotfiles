@@ -40,12 +40,9 @@ function! Layers()
   Layer '+lang/vim'
 
   " Additional plugins.
-  ExtraPlugin 'airblade/vim-rooter'
   ExtraPlugin 'arcticicestudio/nord-vim'
   ExtraPlugin 'carlitux/deoplete-ternjs'
-  ExtraPlugin 'ryanoasis/vim-devicons'
   ExtraPlugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-  ExtraPlugin 'Xuyuanp/nerdtree-git-plugin'
 endfunction
 
 function! UserInit()
@@ -66,10 +63,6 @@ function! UserConfig()
   let g:nord_comment_brightness = 12
   let g:nord_italic = 1
   let g:nord_italic_comments = 1
-  let g:rooter_change_directory_for_non_project_files = 'current'
-  let g:rooter_silent_chdir = 1
-  let g:startify_change_to_dir = 0
-  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
   set cmdheight=1
   set cursorline
