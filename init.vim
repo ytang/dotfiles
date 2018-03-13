@@ -64,10 +64,8 @@ function! UserConfig()
   let g:nord_italic = 1
   let g:nord_italic_comments = 1
 
-  set cmdheight=1
   set cursorline
   set norelativenumber
-  set noshowmode
   set scrolloff=999
   set wildmode=list:longest,full
 
