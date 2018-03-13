@@ -294,7 +294,8 @@ bind -T copy-mode-vi Y send -X copy-end-of-line
 # Aggressively resize the chosen window
 set-window-option -g aggressive-resize on
 
-set-option -ga terminal-overrides ",st-256color:Tc"
+# Allow vim to adjust the shape of the cursor
+set-option -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
 
 # Start a new session if one doesn't already exist
 new-session
