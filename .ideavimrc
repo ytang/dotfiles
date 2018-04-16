@@ -1,0 +1,102 @@
+" Adapted from https://ztlevi.github.io/posts/The-Minimal-Spacemacs-Tweaks-for-Jetbrain-IDES/
+
+let mapleader = ' '
+
+set hlsearch
+set ignorecase
+set incsearch
+set scrolloff=999
+set showmode
+set smartcase
+
+" ============================================================================
+" stop the highlighting for the 'hlsearch' option
+" ============================================================================
+nmap <leader>/ :noh<CR>
+
+" ============================================================================
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+" ============================================================================
+nmap <leader>wh <c-w>h
+nmap <leader>wl <c-w>l
+nmap <leader>wk <c-w>k
+nmap <leader>wj <c-w>j
+nmap <leader>wv <c-w>v
+nmap <leader>ws <c-w>s
+nmap <leader>wc <c-w>c
+nmap <leader>wm :action HideAllWindows<CR>
+
+vmap <leader>wh <c-w>h
+vmap <leader>wl <c-w>l
+vmap <leader>wk <c-w>k
+vmap <leader>wj <c-w>j
+vmap <leader>wv <c-w>v
+vmap <leader>ws <c-w>s
+vmap <leader>wc <c-w>c
+vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
+
+" ============================================================================
+" IDE actions
+" ============================================================================
+nmap <leader><Space> :action GotoAction<CR>
+nmap <leader>cc      :action GotoClass<CR>
+nmap <leader>ff      :action GotoFile<CR>
+nmap <leader>ss      :action GotoSymbol<CR>
+nmap <leader>ft      :action ActivateProjectToolWindow<CR>
+nmap <leader>fs      :action SaveAll<CR>
+nmap <leader>fd      :action DashLauncherAction<CR>
+nmap <leader>bb      :action RecentFiles<CR>
+nmap <leader>bi      :action ActivateStructureToolWindow<CR>
+nmap <leader>bp      :action FileStructurePopup<CR>
+nmap <leader>bu      :action ReopenClosedTab<CR>
+nmap <leader>dd      :action Debug<CR>
+nmap <leader>dD      :action DebugClass<CR>
+nmap <leader>tt      :action ToggleLineBreakpoint<CR>
+nmap <leader>rr      :action Run<CR>
+nmap <leader>rR      :action RunClass<CR>
+nmap <leader>im      :action ImplementMethods<CR>
+nmap <leader>ee      :action ShowErrorDescription<CR>
+nmap <leader>'       :action ActivateTerminalToolWindow<CR>
+
+vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
+vmap <leader>cc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
+vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>ss      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
+vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
+vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
+vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
+vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
+vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
+vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
+vmap <leader>dd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
+vmap <leader>dD      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
+vmap <leader>tt      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
+vmap <leader>rr      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
+vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
+vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
+vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<CR>
+vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
+
+" Reload .ideavimrc
+nmap <leader>R :source ~/.ideavimrc<CR>
+vmap <leader>R :<Backspace><Backspace><Backspace><Backspace><Backspace>source ~/.ideavimrc<CR>
+
+" check the action list
+nmap <leader>al :actionlist<CR>
+vmap <leader>al :a<Backspace><Backspace><Backspace><Backspace><Backspace>ctionlist<CR>
+
+" git
+nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
+vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
+nmap <leader>gS :action ActivateVersionControlToolWindow<CR>
+vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateVersionControlToolWindow<CR>
+
+" search in project
+nmap <leader>sp :action FindInPath<CR>
+vmap <leader>sp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+
+" replace in project
+nmap <leader>rp :action ReplaceInPath<CR>
+vmap <leader>rp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
