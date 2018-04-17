@@ -40,15 +40,16 @@ vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action H
 " IDE actions
 " ============================================================================
 nmap <leader><Space> :action GotoAction<CR>
-nmap <leader>cc      :action GotoClass<CR>
+nmap <leader>fc      :action GotoClass<CR>
 nmap <leader>ff      :action GotoFile<CR>
-nmap <leader>ss      :action GotoSymbol<CR>
+nmap <leader>fs      :action GotoSymbol<CR>
 nmap <leader>ft      :action ActivateProjectToolWindow<CR>
-nmap <leader>fs      :action SaveAll<CR>
+nmap <leader>fS      :action SaveAll<CR>
 nmap <leader>fd      :action DashLauncherAction<CR>
-nmap <leader>bb      :action RecentFiles<CR>
+nmap <leader>fb      :action RecentFiles<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
-nmap <leader>bp      :action FileStructurePopup<CR>
+nmap <leader>bn      :action NextTab<CR>
+nmap <leader>bp      :action PreviousTab<CR>
 nmap <leader>bu      :action ReopenClosedTab<CR>
 nmap <leader>dd      :action Debug<CR>
 nmap <leader>dD      :action DebugClass<CR>
@@ -60,16 +61,17 @@ nmap <leader>ee      :action ShowErrorDescription<CR>
 nmap <leader>'       :action ActivateTerminalToolWindow<CR>
 
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
-vmap <leader>cc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
+vmap <leader>fc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
-vmap <leader>ss      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
+vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
 vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
-vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
+vmap <leader>fS      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
-vmap <leader>bb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
-vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
+vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
-vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
+vmap <leader>bn      :<Backspace><Backspace><Backspace><Backspace><Backspace>action NextTab<CR>
+vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>action PreviousTab<CR>
+vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 vmap <leader>dd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
 vmap <leader>dD      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
 vmap <leader>tt      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
@@ -88,15 +90,21 @@ nmap <leader>al :actionlist<CR>
 vmap <leader>al :a<Backspace><Backspace><Backspace><Backspace><Backspace>ctionlist<CR>
 
 " git
-nmap <leader>gs :action Vcs.QuickListPopupAction<CR>
-vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
-nmap <leader>gS :action ActivateVersionControlToolWindow<CR>
-vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateVersionControlToolWindow<CR>
+nmap <leader>gc :action CheckinProject<CR>
+vmap <leader>gc :<Backspace><Backspace><Backspace><Backspace><Backspace>action CheckinProject<CR>
+nmap <leader>gl :action Vcs.Show.Log<CR>
+vmap <leader>gl :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Log<CR>
+nmap <leader>gp :action Vcs.Push<CR>
+vmap <leader>gp :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Push<CR>
+nmap <leader>gs :action Vcs.Show.Local.Changes<CR>
+vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Local.Changes<CR>
+nmap <leader>gS :action Vcs.QuickListPopupAction<CR>
+vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
 
 " search in project
-nmap <leader>sp :action FindInPath<CR>
-vmap <leader>sp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+nmap <leader>ss :action FindInPath<CR>
+vmap <leader>ss :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
 
 " replace in project
-nmap <leader>rp :action ReplaceInPath<CR>
-vmap <leader>rp :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+nmap <leader>sr :action ReplaceInPath<CR>
+vmap <leader>sr :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
