@@ -47,6 +47,7 @@ nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>fS      :action SaveAll<CR>
 nmap <leader>fd      :action DashLauncherAction<CR>
 nmap <leader>fb      :action RecentFiles<CR>
+nmap <leader>fu      :action FindUsages<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
 nmap <leader>bn      :action NextTab<CR>
 nmap <leader>bp      :action PreviousTab<CR>
@@ -68,6 +69,7 @@ vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>fS      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
 vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader>fu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
 vmap <leader>bn      :<Backspace><Backspace><Backspace><Backspace><Backspace>action NextTab<CR>
 vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>action PreviousTab<CR>
