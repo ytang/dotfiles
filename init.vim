@@ -16,6 +16,7 @@ function! Layers()
   Layer '+nav/comments'
   Layer '+nav/files'
   Layer '+nav/fzf' " Or '+nav/fuzzy'
+  Layer '+nav/jump'
   Layer '+nav/quit'
   Layer '+nav/start-screen'
   Layer '+nav/text'
@@ -42,6 +43,7 @@ function! Layers()
   " Additional plugins.
   ExtraPlugin 'arcticicestudio/nord-vim'
   ExtraPlugin 'carlitux/deoplete-ternjs'
+  ExtraPlugin 'jreybert/vimagit'
   ExtraPlugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 endfunction
 
@@ -49,7 +51,6 @@ function! UserInit()
 " This block is called at the very startup of Spaceneovim initialization
 " before layers configuration.
 
-  let g:spFormatOnSave = 0
 endfunction
 
 function! UserConfig()
@@ -60,7 +61,7 @@ function! UserConfig()
   let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
   let g:LanguageClient_serverCommands.python = ['$HOME/.local/bin/pyls']
   let g:NERDTreeLimitedSyntax = 1
-  let g:nord_comment_brightness = 12
+  let g:nord_comment_brightness = 8
   let g:nord_italic = 1
   let g:nord_italic_comments = 1
 
@@ -73,6 +74,10 @@ function! UserConfig()
     autocmd!
     autocmd BufEnter,WinEnter * call clearmatches() | call matchadd('ColorColumn', '\%>80v.\+', -1)
   augroup END
+
+  nnoremap <leader>/ :noh<CR>
+  nunmap <leader><leader>
+  SpNMap 'gs', 'status', 'Magit'
 
   SetThemeWithBg 'dark', 'nord', 'nord'
 endfunction
