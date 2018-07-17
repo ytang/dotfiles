@@ -44,6 +44,7 @@ function! Layers()
   ExtraPlugin 'arcticicestudio/nord-vim'
   ExtraPlugin 'carlitux/deoplete-ternjs'
   ExtraPlugin 'jreybert/vimagit'
+  ExtraPlugin 'lervag/vimtex'
   ExtraPlugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 endfunction
 
@@ -51,6 +52,7 @@ function! UserInit()
 " This block is called at the very startup of Spaceneovim initialization
 " before layers configuration.
 
+  let g:spFormatOnSave = 0
 endfunction
 
 function! UserConfig()
@@ -64,6 +66,10 @@ function! UserConfig()
   let g:nord_comment_brightness = 8
   let g:nord_italic = 1
   let g:nord_italic_comments = 1
+  let g:polyglot_disabled = ['latex']
+  let g:vimtex_view_general_viewer = 'okular'
+  let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+  let g:vimtex_view_general_options_latexmk = '--unique'
 
   set cursorline
   set norelativenumber
