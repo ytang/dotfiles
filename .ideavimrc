@@ -8,6 +8,7 @@ set incsearch
 set scrolloff=999
 set showmode
 set smartcase
+set surround
 
 " ============================================================================
 " stop the highlighting for the 'hlsearch' option
@@ -26,6 +27,7 @@ nmap <leader>wv <c-w>v
 nmap <leader>ws <c-w>s
 nmap <leader>wc <c-w>c
 nmap <leader>wm :action HideAllWindows<CR>
+nmap <leader>wz :action ToggleDistractionFreeMode<CR>
 
 vmap <leader>wh <c-w>h
 vmap <leader>wl <c-w>l
@@ -35,6 +37,15 @@ vmap <leader>wv <c-w>v
 vmap <leader>ws <c-w>s
 vmap <leader>wc <c-w>c
 vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
+vmap <leader>wz :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleDistractionFreeMode<CR>
+
+" ============================================================================
+" expand and collapse
+" ============================================================================
+nmap zO :action ExpandAllRegions<CR>
+nmap zo :action ExpandRegion<CR>
+nmap zc :action CollapseRegion<CR>
+nmap zC :action CollapseAllRegions<CR>
 
 " ============================================================================
 " IDE actions
@@ -43,9 +54,10 @@ nmap <leader><Space> :action GotoAction<CR>
 nmap <leader>fc      :action GotoClass<CR>
 nmap <leader>ff      :action GotoFile<CR>
 nmap <leader>fs      :action GotoSymbol<CR>
-nmap <leader>ft      :action ActivateProjectToolWindow<CR>
 nmap <leader>fS      :action SaveAll<CR>
-nmap <leader>fd      :action DashLauncherAction<CR>
+nmap <leader>ft      :action ActivateProjectToolWindow<CR>
+nmap <leader>fT      :action SelectInProjectView<CR>
+nmap <leader>fd      :action SmartSearchAction<CR>
 nmap <leader>fb      :action RecentFiles<CR>
 nmap <leader>fu      :action FindUsages<CR>
 nmap <leader>bi      :action ActivateStructureToolWindow<CR>
@@ -60,14 +72,19 @@ nmap <leader>rR      :action RunClass<CR>
 nmap <leader>im      :action ImplementMethods<CR>
 nmap <leader>ee      :action ShowErrorDescription<CR>
 nmap <leader>'       :action ActivateTerminalToolWindow<CR>
+nmap <leader>ji      :action FileStructurePopup<CR>
+nmap <leader>jj      :action AceAction<CR>
+nmap <leader>jl      :action AceLineAction<CR>
+nmap <leader>m=      :action ReformatCode<CR>
 
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
 vmap <leader>fc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
 vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
-vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
 vmap <leader>fS      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
-vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DashLauncherAction<CR>
+vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
+vmap <leader>fT      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
+vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartSearchAction<CR>
 vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>fu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
 vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
@@ -82,6 +99,8 @@ vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>act
 vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
 vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<CR>
 vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
+vmap <leader>ji      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
+vmap <leader>m=      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
 
 " Reload .ideavimrc
 nmap <leader>R :source ~/.ideavimrc<CR>
