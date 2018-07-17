@@ -1,6 +1,0 @@
-Plug 'ctjhoa/spacevim'
-Plug 'hecal3/vim-leader-guide'
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
-Plug 'mhartington/oceanic-next'
-Plug 'mhinz/vim-startify'
-Plug 'ryanoasis/vim-devicons'
