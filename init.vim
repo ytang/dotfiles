@@ -70,6 +70,7 @@ function! UserConfig()
   let g:vimtex_view_general_viewer = 'okular'
   let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
   let g:vimtex_view_general_options_latexmk = '--unique'
+  let $VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 
   set cursorline
   set norelativenumber
@@ -86,6 +87,8 @@ function! UserConfig()
   SpNMap 'gs', 'status', 'Magit'
 
   SetThemeWithBg 'dark', 'nord', 'nord'
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC gui=underline cterm=underline
 endfunction
 
 " Do NOT remove these calls!
