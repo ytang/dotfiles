@@ -82,6 +82,11 @@ function! UserConfig()
     autocmd BufEnter,WinEnter * call clearmatches() | call matchadd('ColorColumn', '\%>80v.\+', -1)
   augroup END
 
+  augroup SecureUndo
+    autocmd!
+    autocmd BufWritePre /tmp/* setlocal noundofile
+  augroup END
+
   nnoremap <leader>/ :noh<CR>
   nunmap <leader><leader>
   SpNMap 'gs', 'status', 'Magit'
