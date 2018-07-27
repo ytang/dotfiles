@@ -157,7 +157,7 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | ⌛#{?loadavg, #{loadavg},} '
+tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | ⚙#{?loadavg, #{loadavg},} '
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %-l:%M%P , %b %d | #{username}#{root} | #{hostname} '
 
 # status left style
@@ -171,7 +171,7 @@ tmux_conf_theme_status_right_bg='black,red,white' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
-tmux_conf_theme_pairing='👓'          # U+1F453
+tmux_conf_theme_pairing='☍'          # U+1F453
 tmux_conf_theme_pairing_fg='brightcyan'
 tmux_conf_theme_pairing_bg='none'
 tmux_conf_theme_pairing_attr='none'
