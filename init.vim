@@ -60,8 +60,7 @@ function! UserConfig()
 
   let g:dotspaceneovim_restore_cursor_to_style = 'block'
   let g:echodoc#enable_at_startup = 1
-  let g:LanguageClient_serverCommands = get(g:, 'LanguageClient_serverCommands', {})
-  let g:LanguageClient_serverCommands.python = ['$HOME/.local/bin/pyls']
+  let g:LanguageClient_serverCommands.python = ['~/.local/bin/pyls']
   let g:NERDTreeLimitedSyntax = 1
   let g:nord_comment_brightness = 8
   let g:nord_italic = 1
