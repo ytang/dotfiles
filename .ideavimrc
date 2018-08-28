@@ -11,121 +11,199 @@ set smartcase
 set surround
 
 " ============================================================================
-" stop the highlighting for the 'hlsearch' option
-" ============================================================================
-nmap <leader>/ :noh<CR>
-
-" ============================================================================
-" key bindings for quickly moving between windows
-" h left, l right, k up, j down
-" ============================================================================
-nmap <leader>wh <c-w>h
-nmap <leader>wl <c-w>l
-nmap <leader>wk <c-w>k
-nmap <leader>wj <c-w>j
-nmap <leader>wv <c-w>v
-nmap <leader>ws <c-w>s
-nmap <leader>wc <c-w>c
-nmap <leader>wm :action HideAllWindows<CR>
-nmap <leader>wz :action ToggleDistractionFreeMode<CR>
-
-vmap <leader>wh <c-w>h
-vmap <leader>wl <c-w>l
-vmap <leader>wk <c-w>k
-vmap <leader>wj <c-w>j
-vmap <leader>wv <c-w>v
-vmap <leader>ws <c-w>s
-vmap <leader>wc <c-w>c
-vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
-vmap <leader>wz :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleDistractionFreeMode<CR>
-
-" ============================================================================
-" expand and collapse
-" ============================================================================
-nmap zO :action ExpandAllRegions<CR>
-nmap zo :action ExpandRegion<CR>
-nmap zc :action CollapseRegion<CR>
-nmap zC :action CollapseAllRegions<CR>
-
-" ============================================================================
-" IDE actions
+" Spacemacs-like mappings
 " ============================================================================
 nmap <leader><Space> :action GotoAction<CR>
-nmap <leader>fc      :action GotoClass<CR>
-nmap <leader>ff      :action GotoFile<CR>
-nmap <leader>fs      :action GotoSymbol<CR>
-nmap <leader>fS      :action SaveAll<CR>
-nmap <leader>ft      :action ActivateProjectToolWindow<CR>
-nmap <leader>fT      :action SelectInProjectView<CR>
-nmap <leader>fd      :action SmartSearchAction<CR>
-nmap <leader>fb      :action RecentFiles<CR>
-nmap <leader>fu      :action FindUsages<CR>
-nmap <leader>bi      :action ActivateStructureToolWindow<CR>
-nmap <leader>bn      :action NextTab<CR>
-nmap <leader>bp      :action PreviousTab<CR>
-nmap <leader>bu      :action ReopenClosedTab<CR>
-nmap <leader>dd      :action Debug<CR>
-nmap <leader>dD      :action DebugClass<CR>
-nmap <leader>tt      :action ToggleLineBreakpoint<CR>
-nmap <leader>rr      :action Run<CR>
-nmap <leader>rR      :action RunClass<CR>
-nmap <leader>im      :action ImplementMethods<CR>
-nmap <leader>ee      :action ShowErrorDescription<CR>
-nmap <leader>'       :action ActivateTerminalToolWindow<CR>
-nmap <leader>ji      :action FileStructurePopup<CR>
-nmap <leader>jj      :action AceAction<CR>
-nmap <leader>jl      :action AceLineAction<CR>
-nmap <leader>m=      :action ReformatCode<CR>
-
+nmap <leader>' :action ActivateTerminalToolWindow<CR>
+nmap <leader>/ :noh<CR>
 vmap <leader><Space> :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoAction<CR>
-vmap <leader>fc      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
-vmap <leader>ff      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
-vmap <leader>fs      :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
-vmap <leader>fS      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
-vmap <leader>ft      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
-vmap <leader>fT      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
-vmap <leader>fd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartSearchAction<CR>
-vmap <leader>fb      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
-vmap <leader>fu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
-vmap <leader>bi      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
-vmap <leader>bn      :<Backspace><Backspace><Backspace><Backspace><Backspace>action NextTab<CR>
-vmap <leader>bp      :<Backspace><Backspace><Backspace><Backspace><Backspace>action PreviousTab<CR>
-vmap <leader>bu      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
-vmap <leader>dd      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
-vmap <leader>dD      :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
-vmap <leader>tt      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
-vmap <leader>rr      :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
-vmap <leader>rR      :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
-vmap <leader>im      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
-vmap <leader>ee      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<CR>
-vmap <leader>'       :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
-vmap <leader>ji      :<Backspace><Backspace><Backspace><Backspace><Backspace>action FileStructurePopup<CR>
-vmap <leader>m=      :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
+vmap <leader>' :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateTerminalToolWindow<CR>
+vmap <leader>/ :<Backspace><Backspace><Backspace><Backspace><Backspace>noh<CR>
 
-" Reload .ideavimrc
-nmap <leader>R :source ~/.ideavimrc<CR>
-vmap <leader>R :<Backspace><Backspace><Backspace><Backspace><Backspace>source ~/.ideavimrc<CR>
-
-" check the action list
+" a - action
 nmap <leader>al :actionlist<CR>
-vmap <leader>al :a<Backspace><Backspace><Backspace><Backspace><Backspace>ctionlist<CR>
+vmap <leader>al :<Backspace><Backspace><Backspace><Backspace><Backspace>actionlist<CR>
 
-" git
+" b - buffer
+nmap <leader>bd :action CloseContent<CR>
+nmap <leader>bn :action NextTab<CR>
+nmap <leader>bo :action CloseAllEditorsButActive<CR>
+nmap <leader>bp :action PreviousTab<CR>
+nmap <leader>bu :action ReopenClosedTab<CR>
+vmap <leader>bd :<Backspace><Backspace><Backspace><Backspace><Backspace>action CloseContent<CR>
+vmap <leader>bn :<Backspace><Backspace><Backspace><Backspace><Backspace>action NextTab<CR>
+vmap <leader>bo :<Backspace><Backspace><Backspace><Backspace><Backspace>action CloseAllEditorsButActive<CR>
+vmap <leader>bp :<Backspace><Backspace><Backspace><Backspace><Backspace>action PreviousTab<CR>
+vmap <leader>bu :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
+
+" c - code
+nmap <leader>ca :action ShowIntentionActions<CR>
+nmap <leader>cc :action CommentByLineComment<CR>
+nmap <leader>cd :action Unwrap<CR>
+nmap <leader>cD :action SafeDelete<CR>
+nmap <leader>cf :action ReformatCode<CR>
+nmap <leader>cg :action Generate<CR>
+nmap <leader>ch :action MoveElementLeft<CR>
+nmap <leader>ci :action OptimizeImports<CR>
+nmap <leader>cj :action MoveStatementDown<CR>
+nmap <leader>ck :action MoveStatementUp<CR>
+nmap <leader>cl :action MoveElementRight<CR>
+nmap <leader>cm :action ImplementMethods<CR>
+nmap <leader>cM :action OverrideMethods<CR>
+nmap <leader>cn :action VcsShowNextChangeMarker<CR>
+nmap <leader>cp :action VcsShowPrevChangeMarker<CR>
+nmap <leader>cr :action RenameElement<CR>
+nmap <leader>cR :action Refactorings.QuickListPopupAction<CR>
+nmap <leader>cs :action SurroundWith<CR>
+nmap <leader>cS :action ChangeSignature<CR>
+nmap <leader>ct :action InsertLiveTemplate<CR>
+vmap <leader>ca :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowIntentionActions<CR>
+vmap <leader>cc :<Backspace><Backspace><Backspace><Backspace><Backspace>action CommentByLineComment<CR>
+vmap <leader>cd :<Backspace><Backspace><Backspace><Backspace><Backspace>action Unwrap<CR>
+vmap <leader>cD :<Backspace><Backspace><Backspace><Backspace><Backspace>action SafeDelete<CR>
+vmap <leader>cf :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReformatCode<CR>
+vmap <leader>cg :<Backspace><Backspace><Backspace><Backspace><Backspace>action Generate<CR>
+vmap <leader>ch :<Backspace><Backspace><Backspace><Backspace><Backspace>action MoveElementLeft<CR>
+vmap <leader>ci :<Backspace><Backspace><Backspace><Backspace><Backspace>action OptimizeImports<CR>
+vmap <leader>cj :<Backspace><Backspace><Backspace><Backspace><Backspace>action MoveStatementUp<CR>
+vmap <leader>ck :<Backspace><Backspace><Backspace><Backspace><Backspace>action MoveStatementDown<CR>
+vmap <leader>cl :<Backspace><Backspace><Backspace><Backspace><Backspace>action MoveElementRight<CR>
+vmap <leader>cm :<Backspace><Backspace><Backspace><Backspace><Backspace>action ImplementMethods<CR>
+vmap <leader>cM :<Backspace><Backspace><Backspace><Backspace><Backspace>action OverrideMethods<CR>
+vmap <leader>cn :<Backspace><Backspace><Backspace><Backspace><Backspace>action VcsShowNextChangeMarker<CR>
+vmap <leader>cp :<Backspace><Backspace><Backspace><Backspace><Backspace>action VcsShowPrevChangeMarker<CR>
+vmap <leader>cr :<Backspace><Backspace><Backspace><Backspace><Backspace>action RenameElement<CR>
+vmap <leader>cR :<Backspace><Backspace><Backspace><Backspace><Backspace>action Refactorings.QuickListPopupAction<CR>
+vmap <leader>cs :<Backspace><Backspace><Backspace><Backspace><Backspace>action SurroundWith<CR>
+vmap <leader>cS :<Backspace><Backspace><Backspace><Backspace><Backspace>action ChangeSignature<CR>
+vmap <leader>ct :<Backspace><Backspace><Backspace><Backspace><Backspace>action InsertLiveTemplate<CR>
+
+" d - doc
+nmap <leader>dd :action SmartSearchAction<CR>
+nmap <leader>dD :action SearchAction<CR>
+vmap <leader>dd :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartSearchAction<CR>
+vmap <leader>dD :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchAction<CR>
+
+" e - error
+nmap <leader>ed :action ShowErrorDescription<CR>
+nmap <leader>en :action GotoNextError<CR>
+nmap <leader>ep :action GotoPreviousError<CR>
+vmap <leader>ed :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowErrorDescription<CR>
+vmap <leader>en :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoNextError<CR>
+vmap <leader>ep :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoPreviousError<CR>
+
+" f - file/find
+nmap <leader>fb :action RecentFiles<CR>
+nmap <leader>fc :action GotoClass<CR>
+nmap <leader>feR :source ~/.ideavimrc<CR>
+nmap <leader>ff :action GotoFile<CR>
+nmap <leader>fs :action GotoSymbol<CR>
+nmap <leader>fS :action SaveAll<CR>
+nmap <leader>ft :action ActivateProjectToolWindow<CR>
+nmap <leader>fT :action SelectInProjectView<CR>
+nmap <leader>fu :action FindUsages<CR>
+vmap <leader>fb :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
+vmap <leader>fc :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
+vmap <leader>feR :<Backspace><Backspace><Backspace><Backspace><Backspace>source ~/.ideavimrc<CR>
+vmap <leader>ff :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>fs :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
+vmap <leader>fS :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
+vmap <leader>ft :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
+vmap <leader>fT :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
+vmap <leader>fu :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
+
+" g - git
+nmap <leader>gb :action Git.Branches<CR>
 nmap <leader>gc :action CheckinProject<CR>
-vmap <leader>gc :<Backspace><Backspace><Backspace><Backspace><Backspace>action CheckinProject<CR>
 nmap <leader>gl :action Vcs.Show.Log<CR>
-vmap <leader>gl :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Log<CR>
+nmap <leader>gm :action Git.Merge<CR>
 nmap <leader>gp :action Vcs.Push<CR>
-vmap <leader>gp :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Push<CR>
 nmap <leader>gs :action Vcs.Show.Local.Changes<CR>
-vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Local.Changes<CR>
 nmap <leader>gS :action Vcs.QuickListPopupAction<CR>
+vmap <leader>gb :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Branches<CR>
+vmap <leader>gc :<Backspace><Backspace><Backspace><Backspace><Backspace>action CheckinProject<CR>
+vmap <leader>gl :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Log<CR>
+vmap <leader>gm :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Merge<CR>
+vmap <leader>gp :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Push<CR>
+vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Local.Changes<CR>
 vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
 
-" search in project
+" j - jump
+nmap <leader>ji :action ActivateStructureToolWindow<CR>
+nmap <leader>jj :action AceAction<CR>
+nmap <leader>jl :action AceLineAction<CR>
+vmap <leader>ji :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
+vmap <leader>jj :<Backspace><Backspace><Backspace><Backspace><Backspace>action AceAction<CR>
+vmap <leader>jl :<Backspace><Backspace><Backspace><Backspace><Backspace>action AceLineAction<CR>
+
+" m - bookmark
+nmap <leader>ml :action ShowBookmarks<CR>
+nmap <leader>mn :action GotoNextBookmark<CR>
+nmap <leader>mp :action GotoPreviousBookmark<CR>
+nmap <leader>mt :action ToggleBookmark<CR>
+nmap <leader>mT :action ToggleBookmarkWithMnemonic<CR>
+vmap <leader>ml :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowBookmarks<CR>
+vmap <leader>mn :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoNextBookmark<CR>
+vmap <leader>mp :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoPreviousBookmark<CR>
+vmap <leader>mt :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleBookmark<CR>
+vmap <leader>mT :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleBookmarkWithMnemonic<CR>
+
+" r - run
+nmap <leader>rb :action ToggleLineBreakpoint<CR>
+nmap <leader>rB :action ViewBreakpoints<CR>
+nmap <leader>rc :action Resume<CR>
+nmap <leader>rd :action Debug<CR>
+nmap <leader>rD :action DebugClass<CR>
+nmap <leader>rf :action StepOut<CR>
+nmap <leader>rn :action StepOver<CR>
+nmap <leader>rq :action Stop<CR>
+nmap <leader>rr :action Run<CR>
+nmap <leader>rR :action RunClass<CR>
+nmap <leader>rs :action StepInto<CR>
+nmap <leader>rS :action SmartStepInto<CR>
+vmap <leader>rb :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleLineBreakpoint<CR>
+vmap <leader>rB :<Backspace><Backspace><Backspace><Backspace><Backspace>action ViewBreakpoints<CR>
+vmap <leader>rc :<Backspace><Backspace><Backspace><Backspace><Backspace>action Resume<CR>
+vmap <leader>rd :<Backspace><Backspace><Backspace><Backspace><Backspace>action Debug<CR>
+vmap <leader>rD :<Backspace><Backspace><Backspace><Backspace><Backspace>action DebugClass<CR>
+vmap <leader>rf :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepOut<CR>
+vmap <leader>rn :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepOver<CR>
+vmap <leader>rq :<Backspace><Backspace><Backspace><Backspace><Backspace>action Stop<CR>
+vmap <leader>rr :<Backspace><Backspace><Backspace><Backspace><Backspace>action Run<CR>
+vmap <leader>rR :<Backspace><Backspace><Backspace><Backspace><Backspace>action RunClass<CR>
+vmap <leader>rs :<Backspace><Backspace><Backspace><Backspace><Backspace>action StepInto<CR>
+vmap <leader>rS :<Backspace><Backspace><Backspace><Backspace><Backspace>action SmartStepInto<CR>
+
+" s - search and replace
+nmap <leader>se :action SearchEverywhere<CR>
+nmap <leader>sr :action ReplaceInPath<CR>
 nmap <leader>ss :action FindInPath<CR>
+vmap <leader>se :<Backspace><Backspace><Backspace><Backspace><Backspace>action SearchEverywhere<CR>
+vmap <leader>sr :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReplaceInPath<CR>
 vmap <leader>ss :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
 
-" replace in project
-nmap <leader>sr :action ReplaceInPath<CR>
-vmap <leader>sr :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindInPath<CR>
+" w - window
+nmap <leader>wd :action VimWindowClose<CR>
+nmap <leader>wh :action VimWindowLeft<CR>
+nmap <leader>wj :action VimWindowDown<CR>
+nmap <leader>wk :action VimWindowUp<CR>
+nmap <leader>wl :action VimWindowRight<CR>
+nmap <leader>wm :action HideAllWindows<CR>
+nmap <leader>wn :action VimWindowNext<CR>
+nmap <leader>wo :action VimWindowOnly<CR>
+nmap <leader>wp :action VimWindowPrev<CR>
+nmap <leader>ws :action VimWindowSplitHorizontal<CR>
+nmap <leader>wv :action VimWindowSplitVertical<CR>
+nmap <leader>wz :action ToggleDistractionFreeMode<CR>
+vmap <leader>wd :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowClose<CR>
+vmap <leader>wh :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowLeft<CR>
+vmap <leader>wj :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowDown<CR>
+vmap <leader>wk :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowUp<CR>
+vmap <leader>wl :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowRight<CR>
+vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
+vmap <leader>wn :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowNext<CR>
+vmap <leader>wo :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowOnly<CR>
+vmap <leader>wp :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowPrev<CR>
+vmap <leader>ws :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowSplitHorizontal<CR>
+vmap <leader>wv :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowSplitVertical<CR>
+vmap <leader>wz :<Backspace><Backspace><Backspace><Backspace><Backspace>action ToggleDistractionFreeMode<CR>
