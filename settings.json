@@ -6,7 +6,8 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.renderWhitespace": "boundary",
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "deepIndent",
     "files.autoSave": "afterDelay",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
@@ -932,5 +933,6 @@
         }
     ],
     "vim.visualstar": true,
-    "workbench.colorTheme": "Nord"
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons"
 }
