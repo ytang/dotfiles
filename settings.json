@@ -14,7 +14,7 @@
     "vim.easymotion": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindings": [
         {
             "before": [
                 "<leader>",
@@ -123,6 +123,71 @@
         {
             "before": [
                 "<leader>",
+                "4"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusFourthEditorGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "5"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusFifthEditorGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "6"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusSixthEditorGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "7"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusSeventhEditorGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "8"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusEighthEditorGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "b",
                 "b"
             ],
@@ -200,6 +265,34 @@
             "commands": [
                 {
                     "command": "workbench.actions.view.problems",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "n"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.marker.next",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "p"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.marker.previous",
                     "args": []
                 }
             ]
@@ -781,6 +874,34 @@
             "before": [
                 "<leader>",
                 "w",
+                "-"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditorDown",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "/"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditorRight",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
                 "d"
             ],
             "after": [],
@@ -815,6 +936,34 @@
             "commands": [
                 {
                     "command": "workbench.action.moveActiveEditorGroupLeft",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "j"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusBelowGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "k"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusAboveGroup",
                     "args": []
                 }
             ]
