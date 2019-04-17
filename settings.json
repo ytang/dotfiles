@@ -14,7 +14,11 @@
     "vim.easymotion": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["$"], "after": ["g", "$"] },
+        { "before": ["0"], "after": ["g", "0"] },
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
         { "before": ["<leader>", "<space>"], "commands": ["workbench.action.showCommands"] },
         { "before": ["<leader>", "'"], "commands": ["workbench.action.terminal.toggleTerminal"] },
         { "before": ["<leader>", "/"], "commands": [":nohlsearch"] },
@@ -96,7 +100,11 @@
         { "before": ["<leader>", "x", "s"], "commands": ["editor.action.sortLinesAscending"] },
         { "before": ["<leader>", "x", "w"], "commands": ["editor.action.trimTrailingWhitespace"] }
     ],
-    "vim.visualModeKeyBindings": [
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["$"], "after": ["g", "$"] },
+        { "before": ["0"], "after": ["g", "0"] },
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
         { "before": ["<leader>", "<space>"], "commands": ["workbench.action.showCommands"] },
         { "before": ["<leader>", "c", "c"], "commands": ["editor.action.commentLine"] },
         { "before": ["<leader>", "c", "f"], "commands": ["editor.action.format"] }
