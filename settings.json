@@ -9,6 +9,7 @@
     "editor.wordWrap": "on",
     "editor.wrappingIndent": "deepIndent",
     "files.autoSave": "afterDelay",
+    "git.autofetch": true,
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.view.pdf.viewer": "tab",
     "telemetry.enableCrashReporter": false,
