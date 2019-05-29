@@ -1,6 +1,6 @@
 {
     "dateTime.customFormat": "ddd  h:mm A",
-    "editor.fontFamily": "'OperatorMonoSSmLig Nerd Font', 'Operator Mono SSm Lig', 'Operator Mono SSm Lig Book', Consolas, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'OperatorMonoSSmLig NF', 'Operator Mono SSm Lig', 'Operator Mono SSm Lig Book', Consolas, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontWeight": "100",
     "editor.formatOnPaste": true,
