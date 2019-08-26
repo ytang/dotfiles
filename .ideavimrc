@@ -2,7 +2,9 @@
 
 let mapleader = ' '
 
+set clipboard^=unnamedplus
 set hlsearch
+set ideajoin
 set ignorecase
 set incsearch
 set scrolloff=999
@@ -26,14 +28,18 @@ vmap <leader>al :<Backspace><Backspace><Backspace><Backspace><Backspace>actionli
 
 " b - buffer
 nmap <leader>bd :action CloseContent<CR>
+nmap <Leader>bh :action LocalHistory.ShowHistory<CR>
 nmap <leader>bn :action NextTab<CR>
 nmap <leader>bo :action CloseAllEditorsButActive<CR>
 nmap <leader>bp :action PreviousTab<CR>
+nmap <leader>bs :action ActivateStructureToolWindow<CR>
 nmap <leader>bu :action ReopenClosedTab<CR>
 vmap <leader>bd :<Backspace><Backspace><Backspace><Backspace><Backspace>action CloseContent<CR>
+vmap <Leader>bh :<Backspace><Backspace><Backspace><Backspace><Backspace>action LocalHistory.ShowHistory<CR>
 vmap <leader>bn :<Backspace><Backspace><Backspace><Backspace><Backspace>action NextTab<CR>
 vmap <leader>bo :<Backspace><Backspace><Backspace><Backspace><Backspace>action CloseAllEditorsButActive<CR>
 vmap <leader>bp :<Backspace><Backspace><Backspace><Backspace><Backspace>action PreviousTab<CR>
+vmap <leader>bs :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
 vmap <leader>bu :<Backspace><Backspace><Backspace><Backspace><Backspace>action ReopenClosedTab<CR>
 
 " c - code
@@ -97,42 +103,56 @@ nmap <leader>fb :action RecentFiles<CR>
 nmap <leader>fc :action GotoClass<CR>
 nmap <leader>feR :source ~/.ideavimrc<CR>
 nmap <leader>ff :action GotoFile<CR>
+nmap <leader>fn :action NewClass<CR>
 nmap <leader>fs :action GotoSymbol<CR>
 nmap <leader>fS :action SaveAll<CR>
 nmap <leader>ft :action ActivateProjectToolWindow<CR>
 nmap <leader>fT :action SelectInProjectView<CR>
-nmap <leader>fu :action FindUsages<CR>
+nmap <leader>fu :action ShowUsages<CR>
+nmap <leader>fU :action FindUsages<CR>
 vmap <leader>fb :<Backspace><Backspace><Backspace><Backspace><Backspace>action RecentFiles<CR>
 vmap <leader>fc :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoClass<CR>
 vmap <leader>feR :<Backspace><Backspace><Backspace><Backspace><Backspace>source ~/.ideavimrc<CR>
 vmap <leader>ff :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoFile<CR>
+vmap <leader>fn :<Backspace><Backspace><Backspace><Backspace><Backspace>action NewClass<CR>
 vmap <leader>fs :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoSymbol<CR>
 vmap <leader>fS :<Backspace><Backspace><Backspace><Backspace><Backspace>action SaveAll<CR>
 vmap <leader>ft :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateProjectToolWindow<CR>
 vmap <leader>fT :<Backspace><Backspace><Backspace><Backspace><Backspace>action SelectInProjectView<CR>
-vmap <leader>fu :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
+vmap <leader>fu :<Backspace><Backspace><Backspace><Backspace><Backspace>action ShowUsages<CR>
+vmap <leader>fU :<Backspace><Backspace><Backspace><Backspace><Backspace>action FindUsages<CR>
 
 " g - git
 nmap <leader>gb :action Git.Branches<CR>
+nmap <leader>gB :action Annotate<CR>
 nmap <leader>gc :action CheckinProject<CR>
+nmap <Leader>gd :action Compare.LastVersion<CR>
+nmap <leader>gf :action Git.Fetch<CR>
 nmap <leader>gl :action Vcs.Show.Log<CR>
 nmap <leader>gm :action Git.Merge<CR>
-nmap <leader>gp :action Vcs.Push<CR>
+nmap <leader>gp :action Git.Pull<CR>
+nmap <leader>gP :action Vcs.Push<CR>
 nmap <leader>gs :action Vcs.Show.Local.Changes<CR>
 nmap <leader>gS :action Vcs.QuickListPopupAction<CR>
 vmap <leader>gb :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Branches<CR>
+vmap <leader>gB :<Backspace><Backspace><Backspace><Backspace><Backspace>action Annotate<CR>
 vmap <leader>gc :<Backspace><Backspace><Backspace><Backspace><Backspace>action CheckinProject<CR>
+vmap <Leader>gd :<Backspace><Backspace><Backspace><Backspace><Backspace>action Compare.LastVersion<CR>
+vmap <leader>gf :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Fetch<CR>
 vmap <leader>gl :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Log<CR>
 vmap <leader>gm :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Merge<CR>
-vmap <leader>gp :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Push<CR>
+vmap <leader>gp :<Backspace><Backspace><Backspace><Backspace><Backspace>action Git.Pull<CR>
+vmap <leader>gP :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Push<CR>
 vmap <leader>gs :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.Show.Local.Changes<CR>
 vmap <leader>gS :<Backspace><Backspace><Backspace><Backspace><Backspace>action Vcs.QuickListPopupAction<CR>
 
 " j - jump
-nmap <leader>ji :action ActivateStructureToolWindow<CR>
+nmap <Leader>jd :action GotoDeclaration<CR>
+nmap <Leader>ji :action GotoImplementation<CR>
 nmap <leader>jj :action AceAction<CR>
 nmap <leader>jl :action AceLineAction<CR>
-vmap <leader>ji :<Backspace><Backspace><Backspace><Backspace><Backspace>action ActivateStructureToolWindow<CR>
+vmap <Leader>jd :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoDeclaration<CR>
+vmap <Leader>ji :<Backspace><Backspace><Backspace><Backspace><Backspace>action GotoImplementation<CR>
 vmap <leader>jj :<Backspace><Backspace><Backspace><Backspace><Backspace>action AceAction<CR>
 vmap <leader>jl :<Backspace><Backspace><Backspace><Backspace><Backspace>action AceLineAction<CR>
 
