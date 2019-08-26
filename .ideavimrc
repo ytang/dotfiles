@@ -208,7 +208,8 @@ nmap <leader>wh :action VimWindowLeft<CR>
 nmap <leader>wj :action VimWindowDown<CR>
 nmap <leader>wk :action VimWindowUp<CR>
 nmap <leader>wl :action VimWindowRight<CR>
-nmap <leader>wm :action HideAllWindows<CR>
+nmap <leader>wm :action HideActiveWindow<CR>
+nmap <leader>wM :action HideAllWindows<CR>
 nmap <leader>wn :action VimWindowNext<CR>
 nmap <leader>wo :action VimWindowOnly<CR>
 nmap <leader>wp :action VimWindowPrev<CR>
@@ -220,7 +221,8 @@ vmap <leader>wh :<Backspace><Backspace><Backspace><Backspace><Backspace>action V
 vmap <leader>wj :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowDown<CR>
 vmap <leader>wk :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowUp<CR>
 vmap <leader>wl :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowRight<CR>
-vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
+vmap <leader>wm :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideActiveWindow<CR>
+vmap <leader>wM :<Backspace><Backspace><Backspace><Backspace><Backspace>action HideAllWindows<CR>
 vmap <leader>wn :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowNext<CR>
 vmap <leader>wo :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowOnly<CR>
 vmap <leader>wp :<Backspace><Backspace><Backspace><Backspace><Backspace>action VimWindowPrev<CR>
