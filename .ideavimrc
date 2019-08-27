@@ -2,7 +2,6 @@
 
 let mapleader = ' '
 
-set clipboard^=unnamedplus
 set hlsearch
 set ideajoin
 set ignorecase
