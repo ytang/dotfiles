@@ -8,7 +8,7 @@ function! Layers()
 
   Layer '+core/behavior'
   Layer '+core/sensible'
-  Layer '+completion/deoplete' " Or '+completion/nvim-completion-manager'
+  Layer '+completion/coc' " Or '+completion/deoplete'
   Layer '+completion/snippets'
   Layer '+checkers/ale' " Or '+checkers/neomake'
   Layer '+checkers/quickfix'
@@ -34,17 +34,21 @@ function! Layers()
 
   " Language layers.
   "Layer '+lang/elm'
-  "Layer '+lang/haskell' " Set backend with e.g. let g:spHaskellBackend = 'intero', in UserInit
-  Layer '+lang/javascript'
+  "Layer '+lang/haskell'
+  "Layer '+lang/rust'
+  "Layer '+lang/go'
+  "Layer '+lang/fsharp'
+  "Layer '+lang/java'
+  "Layer '+lang/javascript'
+  "Layer '+lang/purescript'
   Layer '+lang/python'
   "Layer '+lang/ruby'
+  "Layer '+lang/php'
   Layer '+lang/vim'
 
   " Additional plugins.
   ExtraPlugin 'arcticicestudio/nord-vim'
-  ExtraPlugin 'carlitux/deoplete-ternjs'
   ExtraPlugin 'jreybert/vimagit'
-  ExtraPlugin 'lervag/vimtex'
   ExtraPlugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 endfunction
 
@@ -52,6 +56,14 @@ function! UserInit()
 " This block is called at the very startup of Spaceneovim initialization
 " before layers configuration.
 
+  " Set language server backend to coc.nvim.
+  let g:spLspBackend = 'coc-lsp'
+  " Show type/doc information when leaving cursor on an item. Also accessible
+  " via `SPC l i`.
+  let g:spCocHoverInfo = 1
+  " Set Haskell backend to LSP.
+  let g:spHaskellBackend = 'lsp'
+  " Don't run formatter on save.
   let g:spFormatOnSave = 0
 endfunction
 
@@ -59,16 +71,9 @@ function! UserConfig()
 " This block is called after Spaceneovim layers are configured.
 
   let g:dotspaceneovim_restore_cursor_to_style = 'block'
-  let g:echodoc#enable_at_startup = 1
-  let g:LanguageClient_serverCommands.python = ['~/.local/bin/pyls']
   let g:NERDTreeLimitedSyntax = 1
-  let g:nord_comment_brightness = 8
   let g:nord_italic = 1
   let g:nord_italic_comments = 1
-  let g:polyglot_disabled = ['latex']
-  let g:vimtex_view_general_viewer = 'okular'
-  let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-  let g:vimtex_view_general_options_latexmk = '--unique'
   let $VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 
   set cursorline
