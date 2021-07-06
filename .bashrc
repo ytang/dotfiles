@@ -9,6 +9,9 @@ fi
 [ $TERM = 'xterm-kitty' ] && export COLORTERM=truecolor
 [ $TMUX ] && printf '\ePtmux;\e\e[<u\e\\' && unset COLORTERM
 
+module load gcc-9.2
+module load git-2.16
+
 if [ -f ~/.fzf.bash ]; then
   source ~/.fzf.bash
   if [ -x "$(command -v fd)" ]; then
