@@ -35,5 +35,8 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 alias ls='ls --color=auto'
-[ -x "$(command -v bat)" ] && alias cat='bat --theme=gruvbox-dark --style=numbers,changes --italic-text=always'
+if [ -x "$(command -v bat)" ]; then
+  alias bat='bat --theme=gruvbox-dark --style=numbers,changes --italic-text=always'
+  alias cat='bat --style=plain'
+fi
 [ -x "$(command -v lsd)" ] && alias ll='lsd --long --blocks=permission,size,date,name --date="+%F %R"'
