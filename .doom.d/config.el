@@ -54,15 +54,21 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Set frame size
+;; Restore the old behavior of the s and S keys.
+(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
+
+;; Set frame size.
 (when window-system (set-frame-size (selected-frame) 160 48))
 
 ;; Don't ask for confirmation when leaving Emacs.
 (setq confirm-kill-emacs nil)
 
-;; Set theme
-(setq doom-theme 'doom-monokai-pro)
+;; Set theme.
+(setq doom-theme 'doom-one-light)
 
-;; Italic comments
-(custom-set-faces!
-  '(font-lock-comment-face :slant italic))
+;; New splits will be at the bottom or to the right side of the screen.
+(setq evil-split-window-below t)
+(setq evil-vsplit-window-right t)
+
+;; Italic comments.
+(custom-set-faces! '(font-lock-comment-face :slant italic))
