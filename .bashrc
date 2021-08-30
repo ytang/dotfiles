@@ -9,8 +9,9 @@ fi
 [ $TERM = 'xterm-kitty' ] && export COLORTERM=truecolor
 [ $TMUX ] && printf '\ePtmux;\e\e[<u\e\\' && unset COLORTERM
 
+module load emacs-26.3
 module load gcc-9.2
-module load git-2.16
+module load vagrant
 
 if [ -f ~/.fzf.bash ]; then
   source ~/.fzf.bash
@@ -25,6 +26,8 @@ if [ -f ~/.fzf.bash ]; then
 fi
 
 export EDITOR=vim
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 export LESS='-g -i -M -R -S -w -X -z-4'
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
