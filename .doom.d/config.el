@@ -93,3 +93,34 @@
                                    (member-init-intro . ++)
                                    (statement-cont . llvm-lineup-statement)))))
 (add-hook 'c-mode-common-hook (lambda () (c-set-style "llvm.org")))
+
+;; Customize org export references.
+(use-package ox
+  :defer t
+  :config
+  (defun org-export-get-reference (datum info)
+    (let ((cache (or (plist-get info :internal-references)
+                     (let ((h (make-hash-table :test #'eq)))
+                       (plist-put info :internal-references h)
+                       h)))
+          (reverse-cache (or (plist-get info :taken-internal-references)
+                             (let ((h (make-hash-table :test 'equal)))
+                               (plist-put info :taken-internal-references h)
+                               h))))
+      (or (gethash datum cache)
+          (let* ((name (let ((raw-value (when (listp datum)
+                                          (let ((property-list (cadr datum)))
+                                            (when property-list (plist-get property-list :raw-value))))))
+                         (if raw-value
+                             (replace-regexp-in-string "[^[:alnum:]]" "" (s-downcase raw-value))
+                           (let ((type (org-element-type datum)))
+                             (format "org%s%d"
+                                     (if type
+                                         (replace-regexp-in-string "-" "" (symbol-name type))
+                                       "secondarystring")
+                                     (incf (gethash type cache 0)))))))
+                 (number (+ 1 (gethash name reverse-cache -1)))
+                 (new-name (format "%s%s" name (if (< 0 number) number ""))))
+            (puthash name number reverse-cache)
+            (puthash datum new-name cache)
+            new-name)))))
