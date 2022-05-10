@@ -9,7 +9,6 @@ fi
 [ $TERM = 'xterm-kitty' ] && export COLORTERM=truecolor
 [ $TMUX ] && printf '\ePtmux;\e\e[<u\e\\' && unset COLORTERM
 
-module load emacs-26.3
 module load gcc-9.2
 module load vagrant
 
@@ -25,7 +24,7 @@ if [ -f ~/.fzf.bash ]; then
   [ -x "$(command -v lsd)" ] && export FZF_ALT_C_OPTS="--preview 'lsd --tree --color=always --icon=always {} | head -500'" || export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -500'"
 fi
 
-export EDITOR=vim
+export EDITOR="emacsclient -a '' -c"
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export LESS='-g -i -M -R -S -w -X -z-4'
@@ -37,6 +36,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+alias emacs="emacsclient -a '' -c"
 alias ls='ls --color=auto'
 if [ -x "$(command -v bat)" ]; then
   alias bat='bat --theme=gruvbox-dark --style=numbers,changes --italic-text=always'
