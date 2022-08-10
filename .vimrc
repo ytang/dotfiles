@@ -161,13 +161,47 @@ if exists('&t_SR')
 endif
 let &t_EI = "\<Esc>[2 q"
 
-" Italic comment
-colorscheme ron
-highlight Comment cterm=italic
+" Color scheme based on Ron
+set background=dark
+highlight clear
+let g:colors_name = "ron"
+highlight Normal       guifg=cyan  guibg=black
+highlight NonText      guifg=yellow guibg=#303030
+highlight comment      cterm=italic guifg=green
+highlight constant     guifg=cyan  gui=bold
+highlight identifier   guifg=cyan  gui=NONE
+highlight statement    guifg=lightblue gui=NONE
+highlight preproc      guifg=Pink2
+highlight type         guifg=seagreen  gui=bold
+highlight special      guifg=yellow
+highlight ErrorMsg     guifg=Black guibg=Red
+highlight WarningMsg   guifg=Black guibg=Green
+highlight Error        guibg=Red
+highlight Todo         guifg=Black guibg=orange
+highlight Cursor       guibg=#60a060 guifg=#00ff00
+highlight Search       guibg=darkgray guifg=black gui=bold
+highlight IncSearch    gui=NONE guibg=steelblue
+highlight LineNr       guifg=darkgrey
+highlight title        guifg=darkgrey
+highlight ShowMarksHL  ctermfg=cyan ctermbg=lightblue cterm=bold guifg=yellow guibg=black gui=bold
+highlight StatusLineNC gui=NONE guifg=lightblue guibg=darkblue
+highlight StatusLine   gui=bold guifg=cyan guibg=blue
+highlight label        guifg=gold2
+highlight operator     guifg=orange
+highlight clear Visual
+highlight Visual       term=reverse cterm=reverse gui=reverse
+highlight DiffChange   guibg=darkgreen
+highlight DiffText     guibg=olivedrab
+highlight DiffAdd      guibg=slateblue
+highlight DiffDelete   guibg=coral
+highlight Folded       guibg=gray30
+highlight FoldColumn   guibg=gray30 guifg=white
+highlight cIf0         guifg=gray
+highlight diffOnly     guifg=red gui=bold
 
 " Highlight the current line
 set cursorline
-highlight CursorLine cterm=NONE ctermbg=black
+highlight CursorLine   cterm=NONE ctermbg=black
 highlight CursorLineNr cterm=bold ctermbg=black
 
 " When editing a file, always jump to the last known cursor position.
@@ -343,12 +377,12 @@ set statusline+=%2*\ %l:%v\ (%p%%)\                      " Line number / total l
 set statusline+=%1*                                     " Separator
 set statusline+=%*\ %n\                                  " Buffer number
 
-highlight StatusLine ctermfg=blue
+highlight StatusLine   ctermfg=blue
 highlight StatusLineNC cterm=bold,reverse
-highlight User1 ctermfg=blue ctermbg=240
-highlight User2 ctermbg=240
-highlight User3 ctermfg=240 ctermbg=black
-highlight User4 cterm=italic ctermbg=black
+highlight User1        ctermfg=blue ctermbg=240
+highlight User2        ctermbg=240
+highlight User3        ctermfg=240 ctermbg=black
+highlight User4        cterm=italic ctermbg=black
 
 autocmd vimStartup InsertEnter * highlight StatusLine ctermfg=green | highlight User1 ctermfg=green
 autocmd vimStartup InsertLeave * highlight StatusLine ctermfg=blue | highlight User1 ctermfg=blue
