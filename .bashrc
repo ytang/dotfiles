@@ -9,8 +9,7 @@ fi
 [ $TERM = 'xterm-kitty' ] && export COLORTERM=truecolor
 [ $TMUX ] && printf '\ePtmux;\e\e[<u\e\\' && unset COLORTERM
 
-module load gcc-9.2
-module load vagrant
+module load gcc-12.2 python-3.10
 
 if [ -f ~/.fzf.bash ]; then
   source ~/.fzf.bash
