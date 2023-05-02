@@ -23,7 +23,7 @@ if [ -f ~/.fzf.bash ]; then
   [ -x "$(command -v lsd)" ] && export FZF_ALT_C_OPTS="--preview 'lsd --tree --color=always --icon=always {} | head -500'" || export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -500'"
 fi
 
-export EDITOR="emacsclient -a '' -c"
+export EDITOR="emacsclient -a '' -nw"
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export LESS='-g -i -M -R -S -w -X -z-4'
@@ -35,7 +35,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-alias emacs="emacsclient -a '' -c"
+alias emacs="emacsclient -a '' -nw"
 alias ls='ls --color=auto'
 if [ -x "$(command -v bat)" ]; then
   alias bat='bat --theme=gruvbox-dark --style=numbers,changes --italic-text=always'
