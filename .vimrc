@@ -161,48 +161,66 @@ if exists('&t_SR')
 endif
 let &t_EI = "\<Esc>[2 q"
 
-" Color scheme based on Ron
+" Color scheme based on https://github.com/phanviet/vim-monokai-pro
+if has('termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 set background=dark
-highlight clear
-let g:colors_name = "ron"
-highlight Normal       guifg=cyan  guibg=black
-highlight NonText      guifg=yellow guibg=#303030
-highlight comment      cterm=italic guifg=green
-highlight constant     guifg=cyan  gui=bold
-highlight identifier   guifg=cyan  gui=NONE
-highlight statement    guifg=lightblue gui=NONE
-highlight preproc      guifg=Pink2
-highlight type         guifg=seagreen  gui=bold
-highlight special      guifg=yellow
-highlight ErrorMsg     guifg=Black guibg=Red
-highlight WarningMsg   guifg=Black guibg=Green
-highlight Error        guibg=Red
-highlight Todo         guifg=Black guibg=orange
-highlight Cursor       guibg=#60a060 guifg=#00ff00
-highlight Search       guibg=darkgray guifg=black gui=bold
-highlight IncSearch    gui=NONE guibg=steelblue
-highlight LineNr       guifg=darkgrey
-highlight title        guifg=darkgrey
-highlight ShowMarksHL  ctermfg=cyan ctermbg=lightblue cterm=bold guifg=yellow guibg=black gui=bold
-highlight StatusLineNC gui=NONE guifg=lightblue guibg=darkblue
-highlight StatusLine   gui=bold guifg=cyan guibg=blue
-highlight label        guifg=gold2
-highlight operator     guifg=orange
-highlight clear Visual
-highlight Visual       term=reverse cterm=reverse gui=reverse
-highlight DiffChange   guibg=darkgreen
-highlight DiffText     guibg=olivedrab
-highlight DiffAdd      guibg=slateblue
-highlight DiffDelete   guibg=coral
-highlight Folded       guibg=gray30
-highlight FoldColumn   guibg=gray30 guifg=white
-highlight cIf0         guifg=gray
-highlight diffOnly     guifg=red gui=bold
-
-" Highlight the current line
 set cursorline
-highlight CursorLine   cterm=NONE ctermbg=black
-highlight CursorLineNr cterm=bold ctermbg=black
+highlight clear
+let g:colors_name = "monokai_pro"
+highlight Cursor ctermfg=236 ctermbg=231 cterm=NONE guifg=#2d2a2e guibg=#fcfcfa gui=NONE
+highlight SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guibg=#3a3a3a guifg=NONE guisp=NONE gui=NONE
+highlight Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#403e41 gui=NONE
+highlight CursorLine ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#423f42 gui=NONE
+highlight CursorLineNr ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#423f42 gui=NONE
+highlight CursorColumn ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#423f42 gui=NONE
+highlight ColorColumn ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#423f42 gui=NONE
+highlight LineNr ctermfg=246 ctermbg=59 cterm=NONE guifg=#959394 guibg=#423f42 gui=NONE
+highlight VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#696769 guibg=#696769 gui=NONE
+highlight MatchParen ctermfg=204 ctermbg=NONE cterm=underline guifg=#ff6188 guibg=NONE gui=underline
+highlight StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#fcfcfa guibg=#696769 gui=bold
+highlight StatusLineNC ctermfg=231 ctermbg=59 cterm=NONE guifg=#fcfcfa guibg=#696769 gui=NONE
+highlight Pmenu ctermfg=150 ctermbg=NONE cterm=NONE guifg=#a9dc76 guibg=NONE gui=NONE
+highlight PmenuSel ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#403e41 gui=NONE
+highlight IncSearch ctermfg=236 ctermbg=221 cterm=NONE guifg=#2d2a2e guibg=#ffd866 gui=NONE
+highlight Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+highlight Directory ctermfg=209 ctermbg=NONE cterm=NONE guifg=#fc9867 guibg=NONE gui=NONE
+highlight Folded ctermfg=189 ctermbg=60 cterm=NONE guifg=#d7d7ff guibg=#5f5f87 gui=NONE
+highlight Normal ctermfg=231 ctermbg=236 cterm=NONE guifg=#fcfcfa guibg=#2d2a2e gui=NONE
+highlight Boolean ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Character ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Comment ctermfg=59 ctermbg=NONE cterm=italic guifg=#727072 guibg=NONE gui=italic
+highlight Conditional ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight Constant ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Define ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#fcfcfa guibg=#47840e gui=bold
+highlight DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8c0809 guibg=NONE gui=NONE
+highlight DiffChange ctermfg=231 ctermbg=23 cterm=NONE guifg=#fcfcfa guibg=#273a5b gui=NONE
+highlight DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#fcfcfa guibg=#204a87 gui=bold
+highlight ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+highlight WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+highlight Float ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Function ctermfg=150 ctermbg=NONE cterm=NONE guifg=#a9dc76 guibg=NONE gui=NONE
+highlight Identifier ctermfg=116 ctermbg=NONE cterm=NONE guifg=#78dce8 guibg=NONE gui=italic
+highlight Keyword ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight Label ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight NonText ctermfg=240 ctermbg=236 cterm=NONE guifg=#5b595c guibg=#2d2a2e gui=NONE
+highlight Number ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Special ctermfg=147 ctermbg=NONE cterm=NONE guifg=#ab9df2 guibg=NONE gui=NONE
+highlight Operator ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight PreProc ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight SpecialKey ctermfg=240 ctermbg=59 cterm=NONE guifg=#5b595c guibg=#423f42 gui=NONE
+highlight Statement ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight StorageClass ctermfg=116 ctermbg=NONE cterm=NONE guifg=#78dce8 guibg=NONE gui=italic
+highlight String ctermfg=221 ctermbg=NONE cterm=NONE guifg=#ffd866 guibg=NONE gui=NONE
+highlight Tag ctermfg=204 ctermbg=NONE cterm=NONE guifg=#ff6188 guibg=NONE gui=NONE
+highlight Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#fcfcfa guibg=NONE gui=bold
+highlight Todo ctermfg=231 ctermbg=NONE cterm=inverse,bold guifg=#fcfcfa guibg=NONE gui=inverse,bold,italic
+highlight Type ctermfg=116 ctermbg=NONE cterm=NONE guifg=#78dce8 guibg=NONE gui=italic
+highlight Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid, when inside an event handler
@@ -379,15 +397,13 @@ set statusline+=%2*\ %l:%v\ (%p%%)\                      " Line number / total l
 set statusline+=%1*                                     " Separator
 set statusline+=%*\ %n\                                  " Buffer number
 
-highlight StatusLine   ctermfg=blue
-highlight StatusLineNC cterm=bold,reverse
-highlight User1        ctermfg=blue ctermbg=240
-highlight User2        ctermbg=240
-highlight User3        ctermfg=240 ctermbg=black
-highlight User4        cterm=italic ctermbg=black
+highlight User1 ctermfg=59 ctermbg=238 cterm=bold guifg=#696769 guibg=#423f42 gui=bold
+highlight User2 ctermfg=231 ctermbg=238 cterm=bold guifg=#fcfcfa guibg=#423f42 gui=bold
+highlight User3 ctermfg=238 ctermbg=234 cterm=bold guifg=#423f42 guibg=#181819 gui=bold
+highlight User4 ctermfg=231 ctermbg=234 cterm=bold,italic guifg=#fcfcfa guibg=#181819 gui=bold,italic
 
-autocmd vimStartup InsertEnter * highlight StatusLine ctermfg=green | highlight User1 ctermfg=green
-autocmd vimStartup InsertLeave * highlight StatusLine ctermfg=blue | highlight User1 ctermfg=blue
+autocmd vimStartup InsertEnter * highlight StatusLine ctermfg=231 ctermbg=24 cterm=bold guifg=#fcfcfa guibg=#204a87 gui=bold | highlight User1 ctermfg=24 ctermbg=238 cterm=bold guifg=#204a87 guibg=#423f42 gui=bold
+autocmd vimStartup InsertLeave * highlight StatusLine ctermfg=231 ctermbg=59 cterm=bold guifg=#fcfcfa guibg=#696769 gui=bold | highlight User1 ctermfg=59 ctermbg=238 cterm=bold guifg=#696769 guibg=#423f42 gui=bold
 
 
 "------------------------------------------------------------
